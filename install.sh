@@ -15,6 +15,11 @@ echo $OS
 sudo apt-get install gcc -y
 # yum install gcc -y
 
+echo "export CC=`which gcc-4.6`" > B2G/.userconfig
+echo "export CXX=`which g++-4.6`" >> B2G/.userconfig
+
+echo "export CC=`which gcc-4.6`"
+
 ccache --max-size 3GB
 
 git clone git://github.com/mozilla-b2g/B2G.git
