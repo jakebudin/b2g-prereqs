@@ -21,7 +21,7 @@ echo "export CC=`which gcc-4.6`"
 
 ccache --max-size 3GB
 
-git clone git://github.com/mozilla-b2g/B2G.git
+git clone git://github.com/mozilla-b2g/B2G.git -y -y
 cd B2G/
 ./config.sh emulator
 
