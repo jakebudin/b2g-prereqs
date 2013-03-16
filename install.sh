@@ -1,9 +1,9 @@
 #! /bin/bash
 
 sudo apt-get install autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib git ia32-libs lib32ncurses5-dev lib32z1-dev libgl1-mesa-dev libx11-dev make zip -y
-sudo apt-get upgrade -y
+sudo apt-get upgrade
 
-sudo apt-get update -y
+sudo apt-get update
 
 echo "I barely know what I am doing"
 
@@ -27,6 +27,9 @@ cd B2G/
 
 git pull
 ./repo sync
+
+sudo apt-get update
+cp /home/jb/b2g-prereqs/B2G/.repo/repo/repo /home/jb/b2g-prereqs/B2G/repo
 
 ./build.sh
 
