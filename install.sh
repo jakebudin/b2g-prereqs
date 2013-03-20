@@ -41,6 +41,7 @@ git pull -y
 ./repo sync
 
 sudo apt-get update
+# use your username instead of jbeast ***
 cp /home/jbeast/b2g-prereqs/B2G/.repo/repo/repo /home/jbeast/b2g-prereqs/B2G/repo
 
 ./build.sh
