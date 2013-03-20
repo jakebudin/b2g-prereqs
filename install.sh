@@ -37,7 +37,7 @@ echo "export CXX=`which g++-4.6`" >> B2G/.userconfig
 
 echo "export CC=`which gcc-4.6`"
 
-git pull
+git pull -y
 ./repo sync
 
 sudo apt-get update
