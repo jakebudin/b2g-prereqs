@@ -1,9 +1,9 @@
 #! /bin/bash
 
-sudo apt-get install autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib git ia32-libs lib32ncurses5-dev lib32z1-dev libgl1-mesa-dev libx11-dev make zip
-sudo apt-get upgrade
+sudo apt-get install autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib git ia32-libs lib32ncurses5-dev lib32z1-dev libgl1-mesa-dev libx11-dev make zip -y
+sudo apt-get upgrade -y
 
-sudo apt-get update
+sudo apt-get update -y
 
 echo "I barely know what I am doing"
 
@@ -16,7 +16,7 @@ sudo apt-get install gcc -y
 
 ccache --max-size 3GB
 
-git clone git://github.com/mozilla-b2g/B2G.git
+git clone git://github.com/mozilla-b2g/B2G.git -y
 cd B2G/
 ./config.sh emulator
 
