@@ -5,6 +5,17 @@ sudo apt-get upgrade -y
 
 sudo apt-get update -y
 
+sudo ln -s /usr/lib/i386-linux-gnu/libX11.so.6 /usr/lib/i386-linux-gnu/libX11.so
+sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
+
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 10 -y
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 5 -y
+sudo update-alternatives --config gcc -1
+
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.7 10 -y
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 5 -y
+sudo update-alternatives --config g++ -1
+
 echo "I barely know what I am doing"
 
 # What Linux distro are we on?
@@ -14,9 +25,10 @@ echo $OS
 sudo apt-get install gcc -y
 # yum install gcc -y
 
+sudo apt-get install ccache -y
 ccache --max-size 3GB
 
-git clone git://github.com/mozilla-b2g/B2G.git -y
+git clone git://github.com/mozilla-b2g/B2G.git
 cd B2G/
 ./config.sh emulator
 
@@ -29,7 +41,7 @@ git pull
 ./repo sync
 
 sudo apt-get update
-cp /home/jb/b2g-prereqs/B2G/.repo/repo/repo /home/jb/b2g-prereqs/B2G/repo
+cp /home/jbeast/b2g-prereqs/B2G/.repo/repo/repo /home/jbeast/b2g-prereqs/B2G/repo
 
 ./build.sh
 
